@@ -1,10 +1,8 @@
-"use client";
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import "aos/dist/aos.css";
-import AOS from "aos";
-import { useEffect } from "react";
+import AOSInit from "@/Components/AOSInit";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Fintech Website",
-  description: "just frying my frontend skills",
+  description: "just frying my frontend skills for no reason at all",
   authors: [{ name: "Alex Sunday" }],
   viewport: "width=device-width,initial-scale=1,shrink-to-fit=no",
   icons: {
@@ -38,18 +36,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: false,
-    });
-  }, []);
-
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white mt-2`}
       >
+        <AOSInit />
         {children}
       </body>
     </html>

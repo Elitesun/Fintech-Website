@@ -5,7 +5,7 @@ const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <nav className="fixed top-0 left-0 right-0 bg-black/80 backdrop-blur-md px-4 md:px-6 z-50">
+        <nav className="fixed top-0 left-0 right-0  backdrop-blur-md px-4 md:px-6 z-50">
             <div className="max-w-7xl mx-auto py-4">
                 <div className="flex items-center justify-between">
                     <a className="text-2xl font-bold flex items-center space-x-2" href="/">
