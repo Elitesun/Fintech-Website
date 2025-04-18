@@ -1,7 +1,8 @@
 import Star from './Star';
+import { InfiniteMovingCards } from './ui/infinite-moving-cards';
 const Testimony = () => {
 return (
-<div>
+<div className="overflow-x-hidden">
     {/* Stats Section */}
     <section className="container mx-auto px-4 py-20" data-aos="fade-up">
         <h2 className="text-4xl font-bold text-center mb-2" data-aos="fade-up">TESTIMONIALS / STATS</h2>
@@ -17,30 +18,25 @@ return (
                 <p className="text-gray-400">increase in budgeting efficiency</p>
             </div>
         </div>
-
-        <div className="grid md:grid-cols-3 gap-8 ">
-            {[
-                { name: 'Jenna M., Freelance Developer', img: '/img/Vr.jpg' },
-                { name: 'Kofi B., Startup Founder', img: '/img/Vrfeel.jpg' },
-                { name: 'Alex R., Product Designer', img: '/img/Vrtouch.jpg' }
-            ].map((person) => (
-                <div key={person.name} className="bg-[#1A1B25] p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="300">
-                    <div className='flex items-center text-yellow-400 mb-4'>
-                        <img src={person.img} alt="testimonial" className="w-12 h-12 rounded-full mr-4 object-cover"/>
-                        <div className="flex">
-                            {Array.from({length: 5}).map((_, i) => (
-                                <Star key={i}/>
-                            ))}
-                        </div>
-                    </div>
-                    <p className="font-bold mb-4">— {person.name}</p>
-                    <p className="text-gray-400 italic">
-                        "NeuraBank feels like having a CFO in my pocket"
-                    </p>
-                </div>
-            ))}
-        </div>
-    </section>
+        <InfiniteMovingCards direction="right" speed="normal" items={[ 
+            <div key="1">
+            <div className="text-yellow-400 mb-2">★★★★★</div>
+            <p className="text-gray-300">"Top-tier experience, will use again!"</p>
+            <p className="mt-2 font-bold text-white">— Jenna M., Developer</p>
+            </div>,
+            <div key="2">
+                <div className="text-yellow-400 mb-2">★★★★★</div>
+                <p className="text-gray-300">"Helped launch our MVP under a week!"</p>
+                <p className="mt-2 font-bold text-white">— Kofi B., Founder</p>
+            </div>,
+            <div key="3">
+                <div className="text-yellow-400 mb-2">★★★★★</div>
+                <p className="text-gray-300">"Helped me become more..!"</p>
+                <p className="mt-2 font-bold text-white">— Alex R., Product Designer</p>
+            </div>,
+            ]}
+        />
+</section>
 </div>
 );
 }
