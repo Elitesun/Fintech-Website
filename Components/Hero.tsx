@@ -26,18 +26,19 @@ const Hero = () => {
 
     return (
         <section className="relative min-h-screen flex flex-col items-center justify-center py-20 px-4 md:px-6 overflow-hidden" data-aos="fade-up">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_#000_0%,_#000B3B_100%)]">
+             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_#000_0%,_#000B3B_100%)]" style={{ height: 'calc(100% - 150px)' }}>
                 <div className="absolute inset-0" style={{
                     backgroundImage: 'url("/img/bg.jpg")',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    opacity: '0.15'
+                    opacity: '0.10',
+                    height: '100%',
                 }}></div>
             </div>
             
             <div className="relative max-w-5xl mx-auto text-center mb-16">
-                <h2 className="text-lg text-blue-400 mb-4 uppercase tracking-wider" data-aos="fade-up">our Mission</h2>
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text" data-aos="fade-up" data-aos-delay="200">
+                <h2 className=" mb-4 tracking-wider" data-aos="fade-up">Our Mission</h2>
+                <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text" data-aos="fade-up" data-aos-delay="200">
                     We're building the future of finance.
                     <span className="block mt-4 text-3xl md:text-5xl lg:text-6xl">With AI. For everyone.</span>
                 </h1>

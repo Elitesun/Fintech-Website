@@ -1,4 +1,3 @@
-import { Sparkles } from 'lucide-react';
 import Star from './Star';
 const Testimony = () => {
 return (
@@ -19,7 +18,7 @@ return (
             </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 ">
             {[
                 { name: 'Jenna M., Freelance Developer', img: '/img/Vr.jpg' },
                 { name: 'Kofi B., Startup Founder', img: '/img/Vrfeel.jpg' },
