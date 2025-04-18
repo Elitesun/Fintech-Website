@@ -3,16 +3,16 @@ const Testimony = () => {
 return (
 <div>
     {/* Stats Section */}
-    <section className="container mx-auto px-4 py-20">
-        <h2 className="text-4xl font-bold text-center mb-2">TESTIMONIALS / STATS</h2>
-        <p className="text-center text-gray-400 mb-16">Why People Choose Us</p>
+    <section className="container mx-auto px-4 py-20" data-aos="fade-up">
+        <h2 className="text-4xl font-bold text-center mb-2" data-aos="fade-up">TESTIMONIALS / STATS</h2>
+        <p className="text-center text-gray-400 mb-16" data-aos="fade-up" data-aos-delay="100">Why People Choose Us</p>
 
         <div className="grid grid-cols-2 gap-8 text-center mb-16">
-            <div>
+            <div data-aos="fade-right" data-aos-delay="200">
                 <p className="text-4xl font-bold mb-2">+1200</p>
                 <p className="text-gray-400">happy users</p>
             </div>
-            <div>
+            <div data-aos="fade-left" data-aos-delay="200">
                 <p className="text-4xl font-bold mb-2">95.3%</p>
                 <p className="text-gray-400">increase in budgeting efficiency</p>
             </div>
@@ -24,7 +24,7 @@ return (
                 { name: 'Kofi B., Startup Founder', img: '/img/Vrfeel.jpg' },
                 { name: 'Alex R., Product Designer', img: '/img/Vrtouch.jpg' }
             ].map((person) => (
-                <div key={person.name} className="bg-[#1A1B25] p-6 rounded-2xl">
+                <div key={person.name} className="bg-[#1A1B25] p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="300">
                     <div className='flex items-center text-yellow-400 mb-4'>
                         <img src={person.img} alt="testimonial" className="w-12 h-12 rounded-full mr-4 object-cover"/>
                         <div className="flex">
