@@ -4,7 +4,7 @@ const Footer = () => {
 return (
 <div className="relative overflow-hidden">
     <BackgroundEffects />
-    <footer className="bg-black py-12 px-4 md:px-6">
+    <footer className=" py-12 px-4 md:px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
                 <a className="text-2xl font-bold flex items-center space-x-2" href="/">

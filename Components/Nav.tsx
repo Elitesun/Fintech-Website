@@ -4,6 +4,14 @@ import { useState } from 'react';
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const scrollToSection = (sectionId: string) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            setIsMenuOpen(false);
+        }
+    };
+
     return (
         <nav className="fixed top-0 left-0 right-0 mb-2 backdrop-blur-md px-4 md:px-6 z-50">
             <div className="max-w-7xl mx-auto py-4">
@@ -16,10 +24,25 @@ const Nav = () => {
                         <span>Alex</span>
                     </a>
 
-                    <div className={`md:flex items-center space-x-8 ${isMenuOpen ? 'flex flex-col absolute top-16 left-0 right-0 bg-black/90 p-4 space-y-4 md:space-y-0 md:relative md:top-0 md:bg-transparent md:p-0 md:flex-row' : 'hidden'}`}>
-                        <a className="text-lg hover:text-gray-300 transition-colors" href="/">Home</a>
-                        <a className="text-lg hover:text-gray-300 transition-colors" href="/content">Content</a>
-                        <a className="text-lg hover:text-gray-300 transition-colors" href="/about">About</a>
+                    <div className={`md:flex items-center space-x-8 ${isMenuOpen ? 'flex flex-col items-center justify-center absolute top-16 left-0 right-0 bg-black/90 p-4 space-y-4 md:space-y-0 md:relative md:top-0 md:bg-transparent md:p-0 md:flex-row' : 'hidden'}`}>
+                        <button 
+                            onClick={() => scrollToSection('hero')} 
+                            className="text-lg hover:text-gray-300 transition-colors"
+                        >
+                            Home
+                        </button>
+                        <button 
+                            onClick={() => scrollToSection('feature')} 
+                            className="text-lg hover:text-gray-300 transition-colors"
+                        >
+                            Content
+                        </button>
+                        <button 
+                            onClick={() => scrollToSection('about')} 
+                            className="text-lg hover:text-gray-300 transition-colors"
+                        >
+                            About
+                        </button>
                     </div>
 
                     <div className="flex items-center space-x-4">
