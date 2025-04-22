@@ -1,6 +1,6 @@
 # NeuraBank Components
 
-![Preview](../public/img.png)
+![Preview](./public/img.png)
 
 ## Overview
 This directory contains the core components of the NeuraBank fintech platform, a modern financial technology solution that combines AI-driven insights with elegant user experience.
